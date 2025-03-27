@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Netflix Clone</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: black; color: white; text-align: center; }
+        .movie-container { display: flex; flex-wrap: wrap; justify-content: center; }
+        .movie { margin: 10px; cursor: pointer; }
+        img { width: 200px; height: 300px; border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <h1>🎬 Welcome to My Private Netflix 🎥</h1>
+    <div class="movie-container">
+        <div class="movie" onclick="playMovie('https://onedrive.live.com/download?authkey=XYZ123')">
+            <img src="inception.jpg" alt="Inception">
+            <p>Inception (2010)</p>
+        </div>
+        <div class="movie" onclick="playMovie('https://onedrive.live.com/download?authkey=XYZ456')">
+            <img src="avatar.jpg" alt="Avatar">
+            <p>Avatar (2009)</p>
+        </div>
+    </div>
+
+    <script>
+        function playMovie(url) {
+            window.location.href = "player.html?video=" + encodeURIComponent(url);
+        }
+    </script>
+</body>
+</html>
