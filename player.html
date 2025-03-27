@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Now Playing</title>
+    <style>
+        body { background-color: black; color: white; text-align: center; }
+        video { width: 80%; height: auto; margin-top: 50px; }
+    </style>
+</head>
+<body>
+    <h2>🎥 Now Playing...</h2>
+    <video id="moviePlayer" controls autoplay></video>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const videoUrl = urlParams.get("video");
+        document.getElementById("moviePlayer").src = videoUrl;
+    </script>
+</body>
+</html>
